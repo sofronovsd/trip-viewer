@@ -1,7 +1,7 @@
 import React from 'react';
 import HomePage from "./components/home-page/HomePage";
 import NavBar from "./components/nav-bar/NavBar";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 
 const App: React.FC = () => {
     return (
@@ -10,6 +10,7 @@ const App: React.FC = () => {
             <div className="container">
                 <Switch>
                     <Route component={HomePage} path="/" exact/>
+                    <Redirect to={"/"}/>
                 </Switch>
             </div>
         </BrowserRouter>
